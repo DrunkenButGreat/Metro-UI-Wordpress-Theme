@@ -13,3 +13,29 @@
 <link rel="pingback" href="<? bloginfo('pingback_url'); ?>" />
 </head>
 <body>
+
+<div id="wrapper">
+
+	<!-- Rightcorner Menu -->
+    <div id="headerMenu">
+        <?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
+    </div>
+    <!-- End Rightcorner Menu -->
+    <!-- Box with Blog Title -->
+    <div id="logoBox">
+    	<div id="main"><? bloginfo("name") ?></div>
+        <div id="sub"><? bloginfo("description") ?></div>
+    </div>
+    <!-- End of Box -->
+    <!-- Main Navigationbar -->
+    <div id="navBar">
+      <div id="mainMenu">
+      	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>	              
+      </div> 
+   	  <div id="search">
+        	<form>
+        	  <input type="text" name="search" id="searchfield">
+       	  </form>
+        </div>
+    </div>
+    <!-- End of Main Navigation -->
