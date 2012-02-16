@@ -1,5 +1,6 @@
-    <div id="footer">
-    	<?php bloginfo('name'); ?> runs on WordPress <?php bloginfo('version'); ?> <a href="https://github.com/nedien/Metro-UI-Wordpress-Theme" >Metro UI for Wordpress (join the development)</a> an idea by <a href="http://www.nedien.de">Nedien</a>
+<div id="footer">
+    	  &copy;<?php bloginfo('name'); ?> <br>
+          Powered by Wordpress <?php bloginfo('version'); ?> | Theme: <a href="https://github.com/nedien/Metro-UI-Wordpress-Theme" >Metro UI for Wordpress (join the development)</a> | Idea by <a href="http://www.nedien.de">Nedien</a><br>
     </div>
 </div>
 </body>

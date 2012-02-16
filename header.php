@@ -18,7 +18,7 @@
 
 	<!-- Rightcorner Menu -->
     <div id="headerMenu">
-        <?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'depth' => 1, ) ); ?>
     </div>
     <!-- End Rightcorner Menu -->
     <!-- Box with Blog Title -->
