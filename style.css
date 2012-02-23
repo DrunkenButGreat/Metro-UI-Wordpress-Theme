@@ -2,7 +2,7 @@
 Theme Name: Metro UI
 Theme URI:  https://github.com/nedien/Metro-UI-Wordpress-Theme
 Description: A theme inspired by the Windows 8 Metro UI
-Version: 0.0.0
+Version: 0.1.0
 Author: Nedien
 Author URI: http.//www.nedien.de
 License: Not chosen yet
@@ -113,8 +113,6 @@ body {
 	margin-left: -45px;
 	float: left;
 }
-
-
 #mainMenu ul li {
 	list-style-type: none;
 	float: left;
@@ -127,19 +125,46 @@ body {
 	text-transform: uppercase;
 	margin-right: 5px;
 	margin-left: 5px;
+	position: relative;
+	color: #000;
 }
 #mainMenu ul li:hover {
 	background-color: #00ABF8;
 	color: #FFF;
 
 }
+#mainMenu ul li:hover a:link, #mainMenu a:visited {
+	text-decoration: none;
+	color: #FFF;
+}
+
 #mainMenu a:link, #mainMenu a:visited {
 	text-decoration: none;
 	color: #000;
 }
+
 #mainMenu a:hover {
 	text-decoration: none;
 	color: #FFF;
+}
+#mainMenu ul ul {
+	position: absolute;
+	z-index: 2;
+	float: left;
+	margin-left: -75px;
+	display: none;
+}
+
+#mainMenu ul li:hover ul { 
+display: block; 
+}
+
+#mainMenu ul ul li{
+	background-color: #FFF;
+	width: 100px;
+	text-align: center;
+
+ 
 }
 
 #socialBar {
