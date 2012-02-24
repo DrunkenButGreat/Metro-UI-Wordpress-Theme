@@ -1,17 +1,5 @@
 <? get_header(); ?>
-
-      <div id="sidebar">
-  		<div id="socialBox">
-        	<div id="subscribe">
-            </div>
-            <div id="rss">
-            </div>
-            <div id="twitter">
-            </div>
-            <div id="facebook">
-            </div>
-        </div>
-    </div>
+<? get_sidebar(); ?>
     <!-- Area with a slider and a social area -->
     <div id="socialBar">
     	<div id="slider">
@@ -33,11 +21,11 @@
                 <div id="commentNo">
                      <?php comments_number( '0', '1', '%' ); ?> 
                 </div>
-                <div id="commentLabel">comments</div>
+                <div id="commentLabel"><?php comments_number( 'comments', 'comment', 'comments' ); ?> </div>
           </div>
             <div id="textwrapper">
               <div id="content">
-                	<?php the_content(); ?>
+                	<?php the_excerpt(); ?>
                 </div>
                 <div id="readMore">
                 	<span style="float:left"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>">Continue reading</span>

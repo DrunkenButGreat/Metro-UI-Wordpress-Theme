@@ -1,5 +1,5 @@
 <? get_header(); ?>
-	<div id="404">
+	<div id="error404">
     	<div id="header">
         	404 Requestet Site not found
         </div>
