@@ -104,9 +104,6 @@ function twentyeleven_setup() {
 	// Add support for a variety of post formats
 	add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
 
-	// Add support for custom backgrounds
-	add_custom_background();
-
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
 	add_theme_support( 'post-thumbnails' );
 
@@ -132,66 +129,7 @@ function twentyeleven_setup() {
 	add_image_size( 'large-feature', HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true ); // Used for large feature (header) images
 	add_image_size( 'small-feature', 500, 300 ); // Used for featured posts if a large-feature doesn't exist
 
-	// Turn on random header image rotation by default.
-	add_theme_support( 'custom-header', array( 'random-default' => true ) );
-
-	// Add a way for the custom header to be styled in the admin panel that controls
-	// custom headers. See twentyeleven_admin_header_style(), below.
-	add_custom_image_header( 'twentyeleven_header_style', 'twentyeleven_admin_header_style', 'twentyeleven_admin_header_image' );
-
 	// ... and thus ends the changeable header business.
-
-	// Default custom headers packaged with the theme. %s is a placeholder for the theme template directory URI.
-	register_default_headers( array(
-		'wheel' => array(
-			'url' => '%s/images/headers/wheel.jpg',
-			'thumbnail_url' => '%s/images/headers/wheel-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Wheel', 'twentyeleven' )
-		),
-		'shore' => array(
-			'url' => '%s/images/headers/shore.jpg',
-			'thumbnail_url' => '%s/images/headers/shore-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Shore', 'twentyeleven' )
-		),
-		'trolley' => array(
-			'url' => '%s/images/headers/trolley.jpg',
-			'thumbnail_url' => '%s/images/headers/trolley-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Trolley', 'twentyeleven' )
-		),
-		'pine-cone' => array(
-			'url' => '%s/images/headers/pine-cone.jpg',
-			'thumbnail_url' => '%s/images/headers/pine-cone-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Pine Cone', 'twentyeleven' )
-		),
-		'chessboard' => array(
-			'url' => '%s/images/headers/chessboard.jpg',
-			'thumbnail_url' => '%s/images/headers/chessboard-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Chessboard', 'twentyeleven' )
-		),
-		'lanterns' => array(
-			'url' => '%s/images/headers/lanterns.jpg',
-			'thumbnail_url' => '%s/images/headers/lanterns-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Lanterns', 'twentyeleven' )
-		),
-		'willow' => array(
-			'url' => '%s/images/headers/willow.jpg',
-			'thumbnail_url' => '%s/images/headers/willow-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Willow', 'twentyeleven' )
-		),
-		'hanoi' => array(
-			'url' => '%s/images/headers/hanoi.jpg',
-			'thumbnail_url' => '%s/images/headers/hanoi-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Hanoi Plant', 'twentyeleven' )
-		)
-	) );
 	
 	function custom_excerpt_length( $length ) {
 		return 60;
@@ -321,16 +259,6 @@ function twentyeleven_admin_header_image() { ?>
 <?php }
 endif; // twentyeleven_admin_header_image
 
-/**
- * Sets the post excerpt length to 40 words.
- *
- * To override this length in a child theme, remove the filter and add your own
- * function tied to the excerpt_length filter hook.
- */
-function twentyeleven_excerpt_length( $length ) {
-	return 40;
-}
-add_filter( 'excerpt_length', 'twentyeleven_excerpt_length' );
 
 /**
  * Returns a "Continue Reading" link for excerpts
@@ -339,30 +267,6 @@ function twentyeleven_continue_reading_link() {
 	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) . '</a>';
 }
 
-/**
- * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and twentyeleven_continue_reading_link().
- *
- * To override this in a child theme, remove the filter and add your own
- * function tied to the excerpt_more filter hook.
- */
-function twentyeleven_auto_excerpt_more( $more ) {
-	return ' &hellip;' . twentyeleven_continue_reading_link();
-}
-add_filter( 'excerpt_more', 'twentyeleven_auto_excerpt_more' );
-
-/**
- * Adds a pretty "Continue Reading" link to custom post excerpts.
- *
- * To override this link in a child theme, remove the filter and add your own
- * function tied to the get_the_excerpt filter hook.
- */
-function twentyeleven_custom_excerpt_more( $output ) {
-	if ( has_excerpt() && ! is_attachment() ) {
-		$output .= twentyeleven_continue_reading_link();
-	}
-	return $output;
-}
-add_filter( 'get_the_excerpt', 'twentyeleven_custom_excerpt_more' );
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.

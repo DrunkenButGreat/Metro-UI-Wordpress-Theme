@@ -23,8 +23,12 @@
     <!-- End Rightcorner Menu -->
     <!-- Box with Blog Title -->
     <div id="logoBox">
-    	<div id="main"><? bloginfo("name") ?></div>
-        <div id="sub"><? bloginfo("description") ?></div>
+    	<? if("" == locate_template( 'logo.png' )){ ?>
+            <div id="main"><? bloginfo("name") ?></div>
+            <div id="sub"><? bloginfo("description") ?></div>
+        <? } else { ?>
+        	<img src="<? bloginfo('template_directory') ?>/logo.png" />
+        <? } ?>
     </div>
     <!-- End of Box -->
     <!-- Main Navigationbar -->

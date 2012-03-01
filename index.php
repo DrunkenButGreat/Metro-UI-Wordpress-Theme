@@ -32,7 +32,7 @@
                     <img src="<?php bloginfo('template_directory'); ?>/img/continueReading.png" width="15" height="15" style="float:left; margin:7px"></a>
                 </div>
                	<div class="subelements" id="postedAtAndBy">by <?php the_author_posts_link() ?> <?php the_time('F jS, Y') ?> at <?php the_time('g:i a'); ?></div>
-                <div class="subelements" id="tags">tagged: <? the_tags ?></div>
+                <div class="subelements" id="tags">tagged: <? the_tags() ?></div>
             </div>
   </div>
     <?php endwhile; else: ?>

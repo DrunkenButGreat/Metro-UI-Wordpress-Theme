@@ -12,7 +12,7 @@
                           the_post_thumbnail();
                        	} 
                	?>
-            	<div class="subelements" id="tags">tagged: <? the_tags ?></div>
+            	<div class="subelements" id="tags">tagged: <? the_tags() ?></div>
 				<?php the_content(); ?>
             </div>   
   </div>
