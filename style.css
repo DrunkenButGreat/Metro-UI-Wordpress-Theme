@@ -16,6 +16,17 @@ body {
 	width: 100%;
 	background-color: #CCC;
 }
+a:link, a:visited{
+	color: #00ABF8;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #FFF;
+	text-decoration: none;
+	background-color: #00ABF8;
+}
+
 #wrapper {
 	width: 1024px;
 	height: auto;
@@ -33,7 +44,7 @@ body {
 	height: 30px;
 	width: auto;
 	float: right;
-	margin-top: 0px;
+	margin-top: -15px;
 }
 
 #headerMenu ul li {
@@ -60,6 +71,7 @@ body {
 #headerMenu a:hover {
 	color: #000;
 	text-decoration: underline;
+	background-color: #FFF;
 
 }
 
@@ -170,7 +182,7 @@ display: block;
 #mainMenu ul li:hover ul li a:link, #mainMenu ul li:hover ul li a:visited{
 	color:#000000;
 }
-#mainMenu ul li:hover ul li a:hover{
+#mainMenu ul li:hover ul li a:hover, #mainMenu ul li:hover ul li:hover a{
 	color:#FFF;
 }
 
@@ -242,14 +254,16 @@ display: block;
 #footer {
 	height: 40px;
 	width: 100%;
-	position:absolute;
+	position:relative;
 	bottom: 5px;
 	float: left;
 	text-align: center;
 	font-size: 12px;
+	margin-top: 20px;
 }
 #footer a:link,#footer a:hover,#footer a:visited  {
 	color: #000;
+	background-color: #FFF;
 }
 #post {
 	width: 629px;
@@ -274,6 +288,7 @@ display: block;
 #post #head a:link, #post #head a:visited, #post #head a:hover {
 	color: #000;
 	text-decoration: none;
+	background-color: #FFF;
 }
 
 #post #imageAndCommendWrapper {
@@ -340,6 +355,7 @@ display: block;
 #post #textwrapper .subelements a:hover {
 	color: #00ABF8;
 	text-decoration: none;
+	background-color: #FFF;
 }
 #post #textwrapper #readMore {
 	float: right;
@@ -360,6 +376,7 @@ display: block;
 #post #textwrapper #readMore a:hover {
 	text-decoration: underline;
 	color: #000;
+	background-color: #FFF;
 }
 #error404 {
 	float: left;
@@ -448,8 +465,6 @@ display: block;
 }
 #single a:hover{
 	color: #FFF;
-	text-decoration: none;
-	background-color: #00ABF8;
 }
 #page #head {
 	float: left;
@@ -520,4 +535,96 @@ display: block;
 	height: 120px;
 	width: 305px;
 	background-color: #00ABF8;
+}
+#comment {
+	float: left;
+	width: 630px;
+	margin-right: 10px;
+	margin-left: 30px;
+	margin-top: 15px;
+}
+#comment #title {
+	font-size: 24px;
+	float: left;
+	width: 100%;
+}
+#comment #nopassword {
+	float: left;
+	width: 100%;
+}
+#comment #nocomments {
+	float: left;
+	width: 100%;
+	text-indent: 30px;
+}
+#comment #comment-nav {
+	width: 400px;
+	float: left;
+	margin-left: 115px;
+	height: 50px;
+	margin-top: 15px;
+}
+#comment #comment-nav .assistive-text {
+	text-align: center;
+	float: left;
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+}
+#comment #comment-nav .nav {
+	line-height: 25px;
+	text-align: center;
+	height: 25px;
+	width: 50%;
+	float: left;
+}
+#comment .comment_list {
+	float: left;
+	width: 570px;
+	margin-left: 30px;
+	margin-top: 15px;
+	border: thin solid #00ABF8;
+}
+#comment .comment_list .avatar {
+	float: left;
+	height: 100px;
+	width: 100px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+#comment .comment_list .says {
+	float: left;
+	width: 460px;
+	font-size: 14px;
+}
+#comment .comment_list .awaitingMod {
+	line-height: 30px;
+	height: 30px;
+	width: 100%;
+	font-weight: bold;
+	text-align: center;
+	color: #FFF;
+	background-color: #00ABF8;
+}
+#comment .comment_list .commentText {
+	float: left;
+	width: 460px;
+}
+#comment .comment_list .reply {
+	float: right;
+	width: 200px;
+	margin-top: 10px;
+	text-align: right;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+#comment #respond {
+	float: left;
+	width: 570px;
+	margin-top: 10px;
+	margin-left: 30px;
+	height: 480px;
+}
+#comment #respond #commentform .comment-form-comment #comment {
+	width: 520px;
 }

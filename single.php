@@ -16,6 +16,7 @@
 				<?php the_content(); ?>
             </div>   
   </div>
+  <?php comments_template() ?>
     <?php endwhile; else: ?>
 		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	<?php endif; ?>

@@ -22,14 +22,16 @@
     </div>
     <!-- End Rightcorner Menu -->
     <!-- Box with Blog Title -->
-    <div id="logoBox">
     	<? if("" == locate_template( 'logo.png' )){ ?>
+        <div id="logoBox">
             <div id="main"><? bloginfo("name") ?></div>
             <div id="sub"><? bloginfo("description") ?></div>
+        </div>
         <? } else { ?>
+       	<div id="logoBox" style="height:150px">
         	<img src="<? bloginfo('template_directory') ?>/logo.png" />
+       	</div>
         <? } ?>
-    </div>
     <!-- End of Box -->
     <!-- Main Navigationbar -->
     <div id="navBar">
