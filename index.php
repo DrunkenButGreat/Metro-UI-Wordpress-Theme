@@ -21,18 +21,18 @@
                 <div id="commentNo">
                      <?php comments_number( '0', '1', '%' ); ?> 
                 </div>
-                <div id="commentLabel"><?php comments_number( 'comments', 'comment', 'comments' ); ?> </div>
+                <div id="commentLabel"><?php comments_number( 'Kommentare', 'Kommentar', 'Kommentare' ); ?></div>
           </div>
             <div id="textwrapper">
               <div id="content">
                 	<?php the_excerpt(); ?>
                 </div>
                 <div id="readMore">
-                	<span style="float:left"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>">Continue reading</span>
+                	<span style="float:left"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>">weiterlesen</span>
                     <img src="<?php bloginfo('template_directory'); ?>/img/continueReading.png" width="15" height="15" style="float:left; margin:7px"></a>
                 </div>
-               	<div class="subelements" id="postedAtAndBy">by <?php the_author_posts_link() ?> <?php the_time('F jS, Y') ?> at <?php the_time('g:i a'); ?></div>
-                <div class="subelements" id="tags">tagged: <? the_tags() ?></div>
+               	<div class="subelements" id="postedAtAndBy">von <?php the_author_posts_link() ?> am <?php the_time('d.m.Y') ?> um <?php the_time('H:m'); ?></div>
+                <div class="subelements" id="tags">tags: <? the_tags() ?></div>
             </div>
   </div>
     <?php endwhile; else: ?>
