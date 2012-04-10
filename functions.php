@@ -123,16 +123,15 @@ function twentyeleven_setup() {
 	// We'll be using post thumbnails for custom header images on posts and pages.
 	// We want them to be the size of the header image that we just defined
 	// Larger images will be auto-cropped to fit, smaller ones will be ignored. See header.php.
-	set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
+	set_post_thumbnail_size( 150, 150, true );
 
 	// Add Twenty Eleven's custom image sizes
-	add_image_size( 'large-feature', HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true ); // Used for large feature (header) images
-	add_image_size( 'small-feature', 500, 300 ); // Used for featured posts if a large-feature doesn't exist
+	add_image_size( 'post-thumbnail', 150 ,150, true );  
 
 	// ... and thus ends the changeable header business.
 	
 	function custom_excerpt_length( $length ) {
-		return 60;
+		return 50;
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 	

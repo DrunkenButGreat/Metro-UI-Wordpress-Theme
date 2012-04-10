@@ -15,7 +15,7 @@
                 <? 	if ( !has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.?>
                         <img>
                 <? 	} else {
-                      the_post_thumbnail();
+                      the_post_thumbnail( array(150,150) );
                     } 
                 ?>
                 <div id="commentNo">
@@ -31,8 +31,8 @@
                 	<span style="float:left"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>">weiterlesen</span>
                     <img src="<?php bloginfo('template_directory'); ?>/img/continueReading.png" width="15" height="15" style="float:left; margin:7px"></a>
                 </div>
-               	<div class="subelements" id="postedAtAndBy">von <?php the_author_posts_link() ?> am <?php the_time('d.m.Y') ?> um <?php the_time('H:m'); ?></div>
-                <div class="subelements" id="tags">tags: <? the_tags() ?></div>
+               	<div class="subelements" id="postedAtAndBy">von <?php the_author_posts_link() ?> am <?php the_time('d.m.Y') ?> um <?php the_time('G:i'); ?></div>
+                <div class="subelements" id="tags"><? the_tags() ?></div>
             </div>
   </div>
     <?php endwhile; else: ?>

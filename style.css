@@ -27,6 +27,11 @@ a:hover{
 	background-color: #00ABF8;
 }
 
+a:link img, a:visited img, a:hover img {
+	text-decoration:none;
+	border:none;
+}
+
 #wrapper {
 	width: 1024px;
 	height: auto;
@@ -444,7 +449,7 @@ display: block;
 	margin-left: 30px;
 	float: left;
 }
-#single #content img {
+.wp-post-image {
 	height: 150px;
 	width: 150px;
 	float: left;
@@ -627,4 +632,23 @@ display: block;
 }
 #comment #respond #commentform .comment-form-comment #comment {
 	width: 520px;
+}
+#respond #commentform input  {
+	width: 300px;
+	clip: rect(auto,auto,auto,auto);
+	float: right;
+	margin-right: 50px;
+}
+
+/* Wordpress STD */
+.alignleft{
+	float:left;
+	margin-right:5px;
+	margin-bottom:5px;
+}
+
+.alignright{
+	float:left;
+	margin-left:5px;
+	margin-bottom:5px;
 }

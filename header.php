@@ -11,6 +11,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<? bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<? bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<? bloginfo('pingback_url'); ?>" />
+<? wp_head(); ?>
 </head>
 <body>
 
@@ -29,7 +30,9 @@
         </div>
         <? } else { ?>
        	<div id="logoBox" style="height:150px">
-        	<img src="<? bloginfo('template_directory') ?>/logo.png" />
+        	<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <img src="<? bloginfo('template_directory') ?>/logo.png" />
+           	</a>
        	</div>
         <? } ?>
     <!-- End of Box -->
