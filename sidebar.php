@@ -20,5 +20,8 @@
             	</a>
             </div>
         </div>
+        <ul id="dynSidebar">
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : endif; ?>
+		</ul>
     </div>
     <!-- Area with a slider and a social area -->

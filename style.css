@@ -640,6 +640,34 @@ display: block;
 	margin-right: 50px;
 }
 
+#dynSidebar li{
+	width:304px;
+	border:thin solid #00ABF8;
+	margin-left:-40px;
+	margin-top:10px;
+	float:left
+}
+
+#dynSidebar .widgettitle {
+	background-color: #00ABF8;
+	margin-top: 0px;
+	text-indent: 10px;
+	color: white;
+	margin-bottom: 5px;
+}
+
+#dynSidebar ul li {
+	border: none;
+	margin-left: -30px;
+	margin-right: 5px;
+	margin-top: 0px;
+}
+
+#dynSidebar li, #dynSidebar ul{
+	margin-right: -30px;
+	list-style:none
+}
+
 /* Wordpress STD */
 .alignleft{
 	float:left;
