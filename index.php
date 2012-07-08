@@ -7,9 +7,9 @@
         </div>
     </div>
     <!-- End area -->
+    <!-- Looper -->
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <!-- Looper -->
-  <div id="post">
+  	<div id="post">
             <div id="head"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
             <div id="imageAndCommendWrapper">
                 <? 	if ( !has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.?>
@@ -38,5 +38,13 @@
     <?php endwhile; else: ?>
 		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	<?php endif; ?>
+  <div class="pageNav">
+  	<div style="width:300px; float:left">
+		<?php previous_posts_link(); ?>&nbsp;
+	</div>
+	<div style="width:300px; float:left">
+		&nbsp;<?php next_posts_link(); ?>
+	</div>
+ </div>
 <?php get_footer(); ?>
 

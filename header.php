@@ -41,10 +41,5 @@
       <div id="mainMenu">
       	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>	              
       </div> 
-   	  <div id="search">
-        	<form>
-        	  <input type="text" name="search" id="searchfield">
-       	  </form>
-        </div>
     </div>
     <!-- End of Main Navigation -->

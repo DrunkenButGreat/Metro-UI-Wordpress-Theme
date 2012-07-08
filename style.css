@@ -106,19 +106,7 @@ a:link img, a:visited img, a:hover img {
 	height: 40px;
 	margin-bottom: 10px;
 }
-#navBar #search {
-	width: 200px;
-	height: 40px;
-	float: right;
-	line-height: 40px;
-	margin-right: 15px;
-}
-#navBar #search #searchfield {
-	height: 24px;
-	margin-top: 12px;
-	width: 170px;
-	margin-left: 15px;
-}
+
 #mainMenu {
 	height: 40px;
 	float: left;
@@ -191,14 +179,6 @@ display: block;
 	color:#FFF;
 }
 
-#navBar #searchfield {
-	background-repeat: no-repeat;
-	background-position: 150px center;
-	background-image: url(img/lupe.png);
-	border: thin solid #CCC;
-}
-
-
 #socialBar {
 	height: 250px;
 	width: 629px;
@@ -227,11 +207,39 @@ display: block;
 	width: 305px;
 	float: left;
 }
-#sidebar #socialBox #subscribe {
+#sidebar #socialBox #search {
 	height: 145px;
 	width: 100%;
 	background-color: #00ABF8;
 }
+
+#sidebar #socialBox #search #searchfield {
+	height: 30px;
+	margin-top: 3px;
+	width: 245px;
+	margin-left: 20px;
+	background-repeat: no-repeat;
+	background-position: 240px center;
+	background-image: url(img/lupe.png);
+	border: thin solid #CCC;
+	padding-left: 20px;
+}
+
+#sidebar #socialBox #search #big {
+	color: white;
+	font-weight: normal;
+	font-size: 50px;
+	margin-left: 20px;
+	margin-bottom: 0px;
+}
+
+#sidebar #socialBox #search #small {
+	margin-left: 20px;
+	color: white;
+	font-size: 25px;
+	margin-top: -5px;
+}
+
 #sidebar #socialBox #rss {
 	height: 95px;
 	width: 95px;
@@ -266,6 +274,15 @@ display: block;
 	font-size: 12px;
 	margin-top: 20px;
 }
+.pageNav {
+	float: left;
+	height: 20px;
+	width: 640px;
+	margin-left: 30px;
+	margin-top: 30px;
+	text-align: center;
+}
+
 #footer a:link,#footer a:hover,#footer a:visited  {
 	color: #000;
 	background-color: #FFF;
@@ -309,10 +326,8 @@ display: block;
 #post #imageAndCommendWrapper img {
 	height: 150px;
 	width: 150px;
-	border-top-style: none;
-	border-right-style: none;
-	border-bottom-style: none;
-	border-left-style: none;
+	margin-bottom: 0px;
+	border:none;
 }
 #post #imageAndCommendWrapper #commentNo {
 	line-height: 30px;
@@ -653,7 +668,7 @@ display: block;
 	margin-top: 0px;
 	text-indent: 10px;
 	color: white;
-	margin-bottom: 5px;
+	margin-bottom: 0px;
 }
 
 #dynSidebar ul li {
