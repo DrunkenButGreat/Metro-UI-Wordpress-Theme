@@ -1,8 +1,37 @@
 <!-- for offline designing purpose -->
 <style type="text/css">
 	@import url("../style.css");
-
 </style>
+<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<script>
+jQuery(document).ready(function(e) {
+   
+   
+   jQuery("#wholePagePanel").each(function(index, element) {
+		jQuery(this).hover(function(e) {
+			jQuery(this).children('.title').animate(
+			{
+				height: '0px',
+				top: '240px'
+			},
+			500);
+    	},
+		function(e) {
+			jQuery(this).children('.title').animate(
+			{
+				height: '90px',
+				top: '150px'
+			},
+			500);
+    	}
+		);
+		
+	});
+   
+    
+});
+
+</script>
 <body>
 <div id="wrapper">
 
@@ -58,41 +87,15 @@
             </div>
         </div>
     </div>
-    <!-- Area with a slider and a social area -->
-    <div id="socialBar">
-    	<div id="slider">
-        	Placeholder
-        </div>
-    </div>
-    <!-- End area -->
+ 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <!-- Looper -->
-  <div id="post">
-            <div id="head"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></div>
-            <div id="imageAndCommendWrapper">
-                <? 	if ( !has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.?>
-                        <img>
-                <? 	} else {
-                      the_post_thumbnail();
-                    } 
-                ?>
-                <div class="tile commentNo">
-                     <?php comments_number( '0', '1', '%' ); ?> 
-                </div>
-                <div id="commentLabel">comments</div>
-          </div>
-            <div id="textwrapper">
-              <div id="content">
-                	<?php the_content(); ?><p>test</p>
-                </div>
-                <div id="readMore">
-                	<span style="float:left"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute(); ?>">Continue reading</span>
-                    <img src="<?php bloginfo('template_directory'); ?>/img/continueReading.png" width="15" height="15" style="float:left; margin:7px"></a>
-                </div>
-               	<div class="subelements" id="postedAtAndBy">by <?php the_author_posts_link() ?> <?php the_time('F jS, Y') ?> at <?php the_time('g:i a'); ?></div>
-                <div class="subelements" id="tags">tagged: <? the_tags ?></div>
-            </div>
-  </div>
+    <a href="#"><div id="wholePagePanel" style="background-image:url(../raw_img/lupe.png); background-size: cover; border-color">
+    	<div class="title" style="background-color">
+        	Test<?php the_title(); ?>
+        </div>
+    </div>
+    </a> 
     <?php endwhile; else: ?>
 		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	<?php endif; ?>

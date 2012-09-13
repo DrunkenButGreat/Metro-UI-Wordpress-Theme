@@ -18,7 +18,7 @@
                       the_post_thumbnail( array(150,150) );
                     } 
                 ?>
-                <div id="commentNo">
+                <div class="tile commentNo">
                      <?php comments_number( '0', '1', '%' ); ?> 
                 </div>
                 <div id="commentLabel"><?php comments_number( 'Kommentare', 'Kommentar', 'Kommentare' ); ?></div>

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wholePagePanel {
+	width: 639px;
+	height: 240px;
+	border: 5px solid #00ABF8;
+	float: left;
+	margin-left: 30px;
+ 	margin-bottom:10px;
+}
+.wholePagePanel .title {
+	background-color: #00ABF8;
+	height: 90px;
+	width: 100%;
+	bottom: 0px;
+	top: 150px;
+	float: left;
+	position: relative;
+	color: #FFF;
+	font-size: 34px;
+	line-height: 70px;
+	text-indent: 20px;
+	font-weight: bold;
+}

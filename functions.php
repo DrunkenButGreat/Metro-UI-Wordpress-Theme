@@ -87,7 +87,8 @@ function twentyeleven_setup() {
 	set_post_thumbnail_size( 150, 150, true );
 
 	// Add Twenty Eleven's custom image sizes
-	add_image_size( 'post-thumbnail', 150 ,150, true );  
+	add_image_size( 'post-thumbnail', 150 ,150, true ); 
+	add_image_size( 'wholePagePanel', 639, 240, true ); 
 
 	// ... and thus ends the changeable header business.
 	

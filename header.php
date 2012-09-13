@@ -12,7 +12,37 @@
 <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<? bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<? bloginfo('pingback_url'); ?>" />
 <? wp_head(); ?>
+<script src="<?php bloginfo('template_directory'); ?>/js/jQuery.Color.js"></script>
 </head>
+<script>
+jQuery(document).ready(function(e) {
+   
+   
+   jQuery(".wholePagePanel").each(function(index, element) {
+		jQuery(this).hover(function(e) {
+			jQuery(this).children('.title').animate(
+			{
+				height: '0px',
+				top: '240px'
+			},
+			500);
+    	},
+		function(e) {
+			jQuery(this).children('.title').animate(
+			{
+				height: '90px',
+				top: '150px'
+			},
+			500);
+    	}
+		);
+		
+	});
+   
+    
+});
+
+</script>
 <body>
 
 <div id="wrapper">
